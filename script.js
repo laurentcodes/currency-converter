@@ -28,11 +28,11 @@ async function getRates() {
 	const selector = currenciesSelector.value;
 
 	const res = await fetch(
-		`http://api.currencylayer.com/live?access_key=0fcd4fd8ce111a55b30e7fdbe3bf16df`
+		`https://openexchangerates.org/api/latest.json?app_id=1b1a35a1207d46d3a2d1f8a3644361bc&base=USD`
 	);
 
 	const data = await res.json();
-	const rate = data.quotes[`USD${selector}`];
+	const rate = data.rates[selector];
 
 	return rate;
 }
