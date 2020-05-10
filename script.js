@@ -8,6 +8,8 @@ otherCur.addEventListener('input', calculateUSD);
 currencies.addEventListener('change', calculateRates);
 
 async function saveRates() {
+	saveRates = function () {};
+
 	const rateArr = await getRates();
 	const rates = rateArr[0];
 	const timestamp = rateArr[2];
@@ -76,5 +78,3 @@ setInterval(async () => {
 }, 21600);
 
 loadRates();
-
-window.onload(async () => saveRates);
