@@ -76,4 +76,10 @@ setInterval(async () => {
 }, 10800);
 
 loadRates();
-saveRates();
+
+if ('rates' in localStorage) {
+	console.log('Localstorage present');
+} else {
+	console.log('No localstorage, creating entry');
+	saveRates();
+}
