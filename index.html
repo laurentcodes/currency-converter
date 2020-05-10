@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>USD to any Currency Converter</title>
+	</head>
+	<body>
+		<div class="main-header">
+			<i></i>
+			<h2>USD to Currency Converter</h2>
+		</div>
+
+		<div class="container">
+			<p>USD</p><input type="number" id="usd" class="cur-input" />
+			<span> = </span>
+			<input type="number" class="cur-input" id="other-cur" />
+			<select name="currencies" id="currencies">
+				<option value="NGN">NGN</option>
+				<option value="CAD">CAD</option>
+				<option value="EUR">EUR</option>
+				<option value="GBP" selected>GBP</option>
+				<option value="YEN">YEN</option>
+			</select>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>
