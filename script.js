@@ -73,7 +73,7 @@ setInterval(async () => {
 
 	localStorage.setItem('rates', JSON.stringify(rates));
 	localStorage.setItem('timestamp', JSON.stringify(timestamp));
-}, 21600);
+}, 10800);
 
 loadRates();
 saveRates();
