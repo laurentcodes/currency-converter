@@ -4,34 +4,41 @@
 
 body {
 	background-color: #254b62;
-	margin: 0;
 	font-family: 'Lato', sans-serif;
-	padding: 0 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	max-height: 100vh;
+	margin: 0;
+	padding: 30px;
 }
 
 .main-header {
+	padding: 40px 0;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	color: #cff532;
-	margin-bottom: 30px;
 }
 
 .container {
 	display: flex;
-	flex-direction: row;
 	align-items: center;
-	justify-content: center;
+	justify-content: space-between;
 }
 
 .container input {
+	display: flex;
+	align-items: center;
 	border: 2px solid #cff532;
 	color: #fcfaf1;
 	background-color: transparent;
 	padding: 10px;
 	margin-left: 10px;
 	margin-right: 10px;
-	max-width: 100px;
+	width: 250px;
+	text-align: right;
 }
 
 .container input:focus {
@@ -57,9 +64,40 @@ body {
 	background-color: transparent;
 	color: #fcfaf1;
 	border: 2px solid #cff532;
+	width: 100px;
+	margin-left: 10px;
 }
 
 .container select option {
 	background-color: #254b62;
 	border: 2px solid #cff532;
+}
+
+@media (max-width: 800px) {
+	.container {
+		width: 90%;
+		display: block;
+		text-align: center;
+	}
+
+	.container p {
+		font-size: 140%;
+	}
+
+	.container span {
+		display: block;
+		text-align: center;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+	.container input {
+		width: 50%;
+		margin: auto;
+	}
+
+	.container select {
+		margin-top: 20px;
+		width: 25%;
+	}
 }
