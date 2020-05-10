@@ -34,11 +34,12 @@ body {
 	border: 2px solid #cff532;
 	color: #fcfaf1;
 	background-color: transparent;
-	padding: 10px;
+	padding: 20px;
 	margin-left: 10px;
 	margin-right: 10px;
 	width: 250px;
 	text-align: right;
+	font-size: 130%;
 }
 
 .container input:focus {
@@ -59,12 +60,13 @@ body {
 }
 
 .container select {
-	padding: 10px;
+	text-transform: capitalize;
+	padding: 20px;
 	outline: none;
 	background-color: transparent;
 	color: #fcfaf1;
 	border: 2px solid #cff532;
-	width: 100px;
+	width: 330px;
 	margin-left: 10px;
 }
 
@@ -92,12 +94,16 @@ body {
 	}
 
 	.container input {
-		width: 50%;
+		font-size: 120%;
+		padding: 20px;
+		width: 60%;
 		margin: auto;
 	}
 
 	.container select {
-		margin-top: 20px;
-		width: 25%;
+		text-transform: capitalize;
+		text-align-last: center;
+		margin: 20px auto;
+		width: 80%;
 	}
 }
