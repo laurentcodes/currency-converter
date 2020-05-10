@@ -76,3 +76,5 @@ setInterval(async () => {
 }, 21600);
 
 loadRates();
+
+window.onload(async () => saveRates);
