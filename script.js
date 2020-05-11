@@ -100,10 +100,10 @@ async function checkLocalStorage() {
 
 			console.log('Getting data from localstorage');
 
-			if (difference >= 3) {
+			if (difference < 1) {
 				console.log('Fetching new data');
 				saveRates();
-				location.reload(true);
+				reload();
 			}
 		} else {
 			console.log('No timestamp found');
@@ -121,3 +121,20 @@ async function checkLocalStorage() {
 window.onload = function () {
 	checkLocalStorage();
 };
+
+function reload() {
+	var currentDocumentTimestamp = new Date(
+		performance.timing.domLoading
+	).getTime();
+	// Current Time //
+	var now = Date.now();
+	// Total Process Lenght as Minutes //
+	var tenSec = 10 * 1000;
+	// End Time of Process //
+	var plusTenSec = currentDocumentTimestamp + tenSec;
+	if (now > plusTenSec) {
+		location.reload();
+	}
+
+	console.log('reloading');
+}
