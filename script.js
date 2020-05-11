@@ -1,6 +1,7 @@
 const usd = document.getElementById('usd');
 const otherCur = document.getElementById('other-cur');
 const currenciesSelector = document.getElementById('currencies');
+const rateView = document.getElementById('rateView');
 
 usd.addEventListener('input', calculateRates);
 
@@ -35,6 +36,9 @@ async function calculateRates() {
 	const usdCurrency = usd.value;
 
 	otherCur.value = (usdCurrency * rate).toFixed(2);
+
+	const rateSum = `1 USD = ${rate} ${selector}`;
+	rateView.innerText = rateSum;
 }
 
 async function calculateUSD() {

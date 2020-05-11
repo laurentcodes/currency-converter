@@ -59,6 +59,12 @@ body {
 	color: #fcfaf1;
 }
 
+.container .rate-view {
+	text-align: center;
+	color: #cff532;
+	font-size: 120%;
+}
+
 .container select {
 	text-transform: capitalize;
 	padding: 20px;
@@ -98,6 +104,12 @@ body {
 		padding: 20px;
 		width: 60%;
 		margin: auto;
+	}
+
+	.container .rate-view {
+		margin-top: 10px;
+		text-align: center;
+		color: #cff532;
 	}
 
 	.container select {
