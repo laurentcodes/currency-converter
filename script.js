@@ -14,6 +14,7 @@ async function saveRates() {
 
 	// Save to localstorage
 	localStorage.setItem('rates', JSON.stringify(rates));
+	localStorage.setItem('timestamp', JSON.stringify(timestamp));
 
 	return [rates, timestamp];
 }
@@ -73,13 +74,38 @@ setInterval(async () => {
 
 	localStorage.setItem('rates', JSON.stringify(rates));
 	localStorage.setItem('timestamp', JSON.stringify(timestamp));
-}, 10800);
+}, 3000 * 60 * 60);
 
-loadRates();
+async function checkLocalStorage() {
+	if ('rates' in localStorage) {
+		if ('timestamp' in localStorage) {
+			const timestamp = JSON.parse(localStorage.getItem('timestamp'));
 
-if ('rates' in localStorage) {
-	console.log('Localstorage present');
-} else {
-	console.log('No localstorage, creating entry');
-	saveRates();
+			const dateNow = new Date();
+			const timestampNow = dateNow.getTime();
+
+			const oldDate = new Date(timestamp * 1000);
+			const timestampOld = oldDate.getTime();
+
+			const difference = Math.floor(
+				Math.abs(timestampNow - timestampOld) / 36e5
+			);
+
+			if (difference > 3) {
+				console.log('Fetching new data');
+				saveRates();
+			}
+		} else {
+			console.log('No timestamp found');
+			const timeStamp = await saveRates();
+			const timestamp = timeStamp[1];
+
+			localStorage.setItem('timestamp', JSON.stringify(timestamp));
+		}
+	} else {
+		console.log('No localstorage, creating entry');
+		saveRates();
+	}
 }
+
+checkLocalStorage();
