@@ -103,7 +103,7 @@ async function checkLocalStorage() {
 
 			console.log('Getting data from localstorage');
 
-			if (difference > 3) {
+			if (difference >= 3) {
 				console.log('Fetching new data');
 				saveRates();
 			}
