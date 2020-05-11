@@ -1,9 +1,15 @@
+:root {
+	--primary-color: #cff532;
+	--secondary-color: #254b62;
+	--text-color: #fcfaf1;
+}
+
 * {
 	box-sizing: border-box;
 }
 
 body {
-	background-color: #254b62;
+	background-color: var(--secondary-color);
 	font-family: 'Lato', sans-serif;
 	display: flex;
 	flex-direction: column;
@@ -19,7 +25,13 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	color: #cff532;
+	color: var(--primary-color);
+}
+
+.last-updated {
+	color: var(--primary-color);
+	margin-bottom: 20px;
+	font-weight: bold;
 }
 
 .container {
@@ -31,8 +43,8 @@ body {
 .container input {
 	display: flex;
 	align-items: center;
-	border: 2px solid #cff532;
-	color: #fcfaf1;
+	border: 2px solid var(--primary-color);
+	color: var(--text-color);
 	background-color: transparent;
 	padding: 20px;
 	margin-left: 10px;
@@ -44,25 +56,28 @@ body {
 
 .container input:focus {
 	outline: none;
-	border: 2px solid #fcfaf1;
+	border: 2px solid var(--text-color);
 }
 
 .container p {
 	font-weight: bold;
-	color: #fcfaf1;
+	color: var(--text-color);
 	text-align: center;
 	/* margin-right: 20px; */
 }
 
 .container span {
 	font-size: 180%;
-	color: #fcfaf1;
+	color: var(--text-color);
 }
 
-.container .rate-view {
+.rate-view {
+	margin-top: 20px;
+	display: block;
 	text-align: center;
-	color: #cff532;
+	color: var(--primary-color);
 	font-size: 120%;
+	font-weight: bold;
 }
 
 .container select {
@@ -70,15 +85,15 @@ body {
 	padding: 20px;
 	outline: none;
 	background-color: transparent;
-	color: #fcfaf1;
-	border: 2px solid #cff532;
+	color: var(--text-color);
+	border: 2px solid var(--text-color);
 	width: 330px;
 	margin-left: 10px;
 }
 
 .container select option {
-	background-color: #254b62;
-	border: 2px solid #cff532;
+	background-color: var(--secondary-color);
+	border: 2px solid var(--primary-color);
 }
 
 @media (max-width: 800px) {
@@ -106,10 +121,10 @@ body {
 		margin: auto;
 	}
 
-	.container .rate-view {
-		margin-top: 10px;
+	.rate-view {
+		margin-top: -20px;
 		text-align: center;
-		color: #cff532;
+		color: var(--primary-color);
 	}
 
 	.container select {

@@ -16,13 +16,14 @@
 		<div class="main-header">
 			<h2>USD to Currency Converter</h2>
 		</div>
-
+		
+		<div id="last-updated" class="last-updated"></div>
+		
 		<div class="container">
 			<p><i class="fa fa-dollar-sign"></i> USD</p>
 			<input type="number" id="usd" class="cur-input" />
 			<span> = </span>
 			<input type="number" class="cur-input" id="other-cur" />
-			<div id="rateView" class="rate-view"></div>
 			<select name="currencies" id="currencies">
 				<option value="NGN" label="Nigerian naira">NGN</option>
 				<option value="EUR" label="Euro">EUR</option>
@@ -191,7 +192,12 @@
 				<option value="ZAR" label="South African rand">ZAR</option>
 				<option value="ZMW" label="Zambian kwacha">ZMW</option>
 			</select>
+			<br />
+			<br />
+			<br />
+			<br />
 		</div>
+		<div id="rateView" class="rate-view"></div>
 
 		<script src="script.js"></script>
 	</body>

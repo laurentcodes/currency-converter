@@ -2,6 +2,7 @@ const usd = document.getElementById('usd');
 const otherCur = document.getElementById('other-cur');
 const currenciesSelector = document.getElementById('currencies');
 const rateView = document.getElementById('rateView');
+const lastUpdated = document.getElementById('last-updated');
 
 usd.addEventListener('input', calculateRates);
 
@@ -94,6 +95,11 @@ async function checkLocalStorage() {
 			const difference = Math.floor(
 				Math.abs(timestampNow - timestampOld) / 36e5
 			);
+
+			const formatDate = new Date(timestampOld);
+			const dateString = `Last Update: ${formatDate.toLocaleString()}`;
+
+			lastUpdated.innerText = dateString;
 
 			if (difference > 3) {
 				console.log('Fetching new data');
