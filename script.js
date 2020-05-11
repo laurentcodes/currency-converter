@@ -66,7 +66,7 @@ async function getRates() {
 
 	const data = await res.json();
 
-	return [data.rates, rates[selector], data.timestamp];
+	return [data.rates, data.rates[selector], data.timestamp];
 }
 
 setInterval(async () => {
