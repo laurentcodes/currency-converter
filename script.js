@@ -101,6 +101,8 @@ async function checkLocalStorage() {
 
 			lastUpdated.innerText = dateString;
 
+			console.log('Getting data from localstorage');
+
 			if (difference > 3) {
 				console.log('Fetching new data');
 				saveRates();
