@@ -118,4 +118,6 @@ async function checkLocalStorage() {
 	}
 }
 
-checkLocalStorage();
+window.onload = function () {
+	checkLocalStorage();
+};
