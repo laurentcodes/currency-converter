@@ -7,7 +7,7 @@ const lastUpdated = document.getElementById('last-updated');
 usd.addEventListener('input', calculateRates);
 
 otherCur.addEventListener('input', calculateUSD);
-currencies.addEventListener('change', calculateRates);
+currenciesSelector.addEventListener('change', calculateRates);
 
 async function saveRates() {
 	const rateArr = await getRates();
@@ -65,11 +65,8 @@ async function getRates() {
 	);
 
 	const data = await res.json();
-	const rates = data.rates;
-	const timestamp = data.timestamp;
-	const rate = rates[selector];
 
-	return [rates, rate, timestamp];
+	return [data.rates, rates[selector], data.timestamp];
 }
 
 setInterval(async () => {
