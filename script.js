@@ -103,7 +103,7 @@ async function checkLocalStorage() {
 			if (difference >= 3) {
 				console.log('Fetching new data');
 				saveRates();
-				location = location;
+				location.reload(true);
 			}
 		} else {
 			console.log('No timestamp found');
