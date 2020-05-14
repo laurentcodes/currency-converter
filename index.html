@@ -16,9 +16,9 @@
 		<div class="main-header">
 			<h2>USD to Currency Converter</h2>
 		</div>
-		
+
 		<div id="last-updated" class="last-updated"></div>
-		
+
 		<div class="container">
 			<p><i class="fa fa-dollar-sign"></i> USD</p>
 			<input type="number" id="usd" class="cur-input" />
@@ -26,6 +26,7 @@
 			<input type="number" class="cur-input" id="other-cur" />
 			<select name="currencies" id="currencies">
 				<option value="NGN" label="Nigerian naira">NGN</option>
+				<option value="BTC" label="Bitcoin">BTC</option>
 				<option value="EUR" label="Euro">EUR</option>
 				<option value="GBP" label="Pound sterling">GBP</option>
 				<option value="USD" label="United States dollar">USD</option>
@@ -53,6 +54,7 @@
 				<option value="BOB" label="Bolivian boliviano">BOB</option>
 				<option value="BRL" label="Brazilian real">BRL</option>
 				<option value="BSD" label="Bahamian dollar">BSD</option>
+				<option value="BTC" label="Bitcoin">BTC</option>
 				<option value="BTN" label="Bhutanese ngultrum">BTN</option>
 				<option value="BWP" label="Botswana pula">BWP</option>
 				<option value="BYN" label="Belarusian ruble">BYN</option>
@@ -60,7 +62,9 @@
 				<option value="CAD" label="Canadian dollar">CAD</option>
 				<option value="CDF" label="Congolese franc">CDF</option>
 				<option value="CHF" label="Swiss franc">CHF</option>
+				<option value="CLF" label="Chilean Unidad de Fomento">CLF</option>
 				<option value="CLP" label="Chilean peso">CLP</option>
+				<option value="CNH" label="Chinese Yuan Renminbi">CNH</option>
 				<option value="CNY" label="Chinese yuan">CNY</option>
 				<option value="COP" label="Colombian peso">COP</option>
 				<option value="CRC" label="Costa Rican colón">CRC</option>
@@ -89,7 +93,6 @@
 				<option value="GYD" label="Guyanese dollar">GYD</option>
 				<option value="HKD" label="Hong Kong dollar">HKD</option>
 				<option value="HNL" label="Honduran lempira">HNL</option>
-				<option value="HKD" label="Hong Kong dollar">HKD</option>
 				<option value="HRK" label="Croatian kuna">HRK</option>
 				<option value="HTG" label="Haitian gourde">HTG</option>
 				<option value="HUF" label="Hungarian forint">HUF</option>
@@ -107,7 +110,6 @@
 				<option value="KES" label="Kenyan shilling">KES</option>
 				<option value="KGS" label="Kyrgyzstani som">KGS</option>
 				<option value="KHR" label="Cambodian riel">KHR</option>
-				<option value="KID" label="Kiribati dollar">KID</option>
 				<option value="KMF" label="Comorian franc">KMF</option>
 				<option value="KPW" label="North Korean won">KPW</option>
 				<option value="KRW" label="South Korean won">KRW</option>
@@ -127,6 +129,7 @@
 				<option value="MMK" label="Burmese kyat">MMK</option>
 				<option value="MNT" label="Mongolian tögrög">MNT</option>
 				<option value="MOP" label="Macanese pataca">MOP</option>
+				<option value="MRO" label="Mauritanian ouguiya (Old)">MRO</option>
 				<option value="MRU" label="Mauritanian ouguiya">MRU</option>
 				<option value="MUR" label="Mauritian rupee">MUR</option>
 				<option value="MVR" label="Maldivian rufiyaa">MVR</option>
@@ -147,23 +150,26 @@
 				<option value="PHP" label="Philippine peso">PHP</option>
 				<option value="PKR" label="Pakistani rupee">PKR</option>
 				<option value="PLN" label="Polish złoty">PLN</option>
-				<option value="PRB" label="Transnistrian ruble">PRB</option>
 				<option value="PYG" label="Paraguayan guaraní">PYG</option>
 				<option value="QAR" label="Qatari riyal">QAR</option>
-				<option value="RON" label="Romanian leu">RON</option>
 				<option value="RON" label="Romanian leu">RON</option>
 				<option value="RSD" label="Serbian dinar">RSD</option>
 				<option value="RUB" label="Russian ruble">RUB</option>
 				<option value="RWF" label="Rwandan franc">RWF</option>
 				<option value="SAR" label="Saudi riyal">SAR</option>
+				<option value="SBD" label="Solomon Islands dollar">SBD</option>
+				<option value="SCR" label="Seychelles Rupees">SCR</option>
+				<option value="SDG" label="Sudanese Pound">SDG</option>
 				<option value="SEK" label="Swedish krona">SEK</option>
 				<option value="SGD" label="Singapore dollar">SGD</option>
 				<option value="SHP" label="Saint Helena pound">SHP</option>
 				<option value="SLL" label="Sierra Leonean leone">SLL</option>
-				<option value="SLS" label="Somaliland shilling">SLS</option>
+				<option value="SOS" label="Somali Shilling">SOS</option>
 				<option value="SRD" label="Surinamese dollar">SRD</option>
 				<option value="SSP" label="South Sudanese pound">SSP</option>
+				<option value="STD" label="Sao Tomean Dobra">STD</option>
 				<option value="STN" label="São Tomé and Príncipe dobra">STN</option>
+				<option value="SVC" label="Salvadoran Colón">SVC</option>
 				<option value="SYP" label="Syrian pound">SYP</option>
 				<option value="SZL" label="Swazi lilangeni">SZL</option>
 				<option value="THB" label="Thai baht">THB</option>
@@ -173,7 +179,6 @@
 				<option value="TOP" label="Tongan paʻanga">TOP</option>
 				<option value="TRY" label="Turkish lira">TRY</option>
 				<option value="TTD" label="Trinidad and Tobago dollar">TTD</option>
-				<option value="TVD" label="Tuvaluan dollar">TVD</option>
 				<option value="TWD" label="New Taiwan dollar">TWD</option>
 				<option value="TZS" label="Tanzanian shilling">TZS</option>
 				<option value="UAH" label="Ukrainian hryvnia">UAH</option>
@@ -181,21 +186,25 @@
 				<option value="USD" label="United States dollar">USD</option>
 				<option value="UYU" label="Uruguayan peso">UYU</option>
 				<option value="UZS" label="Uzbekistani soʻm">UZS</option>
+				<option value="VEF" label="Venezuelan Bolívar">VEF</option>
 				<option value="VES" label="Venezuelan bolívar soberano">VES</option>
 				<option value="VND" label="Vietnamese đồng">VND</option>
 				<option value="VUV" label="Vanuatu vatu">VUV</option>
 				<option value="WST" label="Samoan tālā">WST</option>
 				<option value="XAF" label="Central African CFA franc">XAF</option>
+				<option value="XAG" label="Ounces of Silver">XAG</option>
+				<option value="XAU" label="Ounces of Gold">XAU</option>
 				<option value="XCD" label="Eastern Caribbean dollar">XCD</option>
+				<option value="XDR" label="IMF Special Drawing Rights">XDR</option>
 				<option value="XOF" label="West African CFA franc">XOF</option>
+				<option value="XPD" label="Palladium Ounce">XPD</option>
 				<option value="XPF" label="CFP franc">XPF</option>
+				<option value="XPT" label="Platinum Ounce">XPT</option>
+				<option value="YER" label="Yemeni Rial">YER</option>
 				<option value="ZAR" label="South African rand">ZAR</option>
 				<option value="ZMW" label="Zambian kwacha">ZMW</option>
+				<option value="ZWL" label="Zimbabwean dollar">ZWL</option>
 			</select>
-			<br />
-			<br />
-			<br />
-			<br />
 		</div>
 		<div id="rateView" class="rate-view"></div>
 

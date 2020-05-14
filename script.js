@@ -18,6 +18,11 @@ async function saveRates() {
 	localStorage.setItem('rates', JSON.stringify(rates));
 	localStorage.setItem('timestamp', JSON.stringify(timestamp));
 
+	const formatDate = new Date(timestamp);
+	const dateString = `Last Update: ${formatDate.toLocaleString()}`;
+
+	lastUpdated.innerText = dateString;
+
 	return [rates, timestamp];
 }
 
@@ -36,7 +41,11 @@ async function calculateRates() {
 
 	const usdCurrency = usd.value;
 
-	otherCur.value = (usdCurrency * rate).toFixed(2);
+	if (selector === 'BTC') {
+		otherCur.value = (usdCurrency * rate).toFixed(5);
+	} else {
+		otherCur.value = (usdCurrency * rate).toFixed(2);
+	}
 
 	const rateSum = `1 USD = ${rate} ${selector}`;
 	rateView.innerText = rateSum;
@@ -53,7 +62,7 @@ async function calculateUSD() {
 
 	const otherCurrency = otherCur.value;
 
-	usd.value = (otherCurrency / finalRate).toFixed(2);
+	usd.value = (otherCurrency / finalRate).toFixed(5);
 }
 
 // Fetch conversion rates
@@ -83,6 +92,9 @@ async function checkLocalStorage() {
 		if ('timestamp' in localStorage) {
 			const timestamp = JSON.parse(localStorage.getItem('timestamp'));
 
+			const selector = currenciesSelector.value;
+			const rates = loadRates();
+
 			const dateNow = new Date();
 			const timestampNow = dateNow.getTime();
 
@@ -97,6 +109,9 @@ async function checkLocalStorage() {
 			const dateString = `Last Update: ${formatDate.toLocaleString()}`;
 
 			lastUpdated.innerText = dateString;
+
+			const rateSum = `1 USD = ${rates[selector]} ${selector}`;
+			rateView.innerText = rateSum;
 
 			console.log('Getting data from localstorage');
 
