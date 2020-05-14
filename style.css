@@ -132,5 +132,6 @@ body {
 		text-align-last: center;
 		margin: 20px auto;
 		width: 80%;
+		border: 2px solid var(--primary-color);
 	}
 }
