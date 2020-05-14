@@ -18,7 +18,7 @@ async function saveRates() {
 	localStorage.setItem('rates', JSON.stringify(rates));
 	localStorage.setItem('timestamp', JSON.stringify(timestamp));
 
-	const formatDate = new Date(timestamp);
+	const formatDate = new Date(timestamp * 1000);
 	const dateString = `Last Update: ${formatDate.toLocaleString()}`;
 
 	lastUpdated.innerText = dateString;
