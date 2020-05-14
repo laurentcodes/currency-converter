@@ -14,6 +14,9 @@ async function saveRates() {
 	const rates = rateArr[0];
 	const timestamp = rateArr[2];
 
+	const selector = currenciesSelector.value;
+	const rateSum = `1 USD = ${rates[selector]} ${selector}`;
+
 	// Save to localstorage
 	localStorage.setItem('rates', JSON.stringify(rates));
 	localStorage.setItem('timestamp', JSON.stringify(timestamp));
@@ -22,6 +25,8 @@ async function saveRates() {
 	const dateString = `Last Update: ${formatDate.toLocaleString()}`;
 
 	lastUpdated.innerText = dateString;
+
+	rateView.innerText = rateSum;
 
 	return [rates, timestamp];
 }
